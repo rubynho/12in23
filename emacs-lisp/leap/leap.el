@@ -3,8 +3,9 @@
 ;;; Commentary:
 
 (defun leap-year-p (year)
-;;; Code:
-)
+  (or (= (mod year 400) 0)
+      (and (= (mod year 4) 0)
+           (/= (mod year 100) 0))))
 
 (provide 'leap-year-p)
 ;;; leap.el ends here
